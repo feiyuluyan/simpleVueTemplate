@@ -57,6 +57,6 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 
 ```
 
-test user
-username = admin
-passowrd = 123456
+## test user
+- username = admin
+- passowrd = 123456
