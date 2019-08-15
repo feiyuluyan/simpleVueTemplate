@@ -56,3 +56,7 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 'package.json': nodejs模块依赖
 
 ```
+
+test user
+username = admin
+passowrd = 123456
