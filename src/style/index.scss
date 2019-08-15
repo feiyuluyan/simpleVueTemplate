@@ -1,0 +1,15 @@
+@import './button.scss';
+@import './custom.scss';
+@import './function.scss';
+@import './var.scss';
+
+#app{
+  background: #f3f3f3;
+}
+html,body{
+  margin: 0px;
+  padding: 0px;
+}
+*{
+  box-sizing: border-box;
+}
