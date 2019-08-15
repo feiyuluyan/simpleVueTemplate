@@ -40,12 +40,20 @@ global.setJwtToken = function (token) {
   CookieUtil.setCookie(Constant.JWT_TOKEN, token, expireTime)
 }
 
+global.clearJwtToken = function () {
+  CookieUtil.delCookie(Constant.JWT_TOKEN)
+}
+
 /**
  * set loginin user info.
  */
 global.setUserInfo = function (info) {
   let expireTime = localStorage.getItem(Constant.EXPIRE_TIME)
   CookieUtil.setCookie(Constant.USER_INFO, JSON.stringify(info), expireTime ? parseInt(expireTime) : 0)
+}
+
+global.clearJwtToken = function () {
+  CookieUtil.delCookie(Constant.USER_INFO)
 }
 
 /**
