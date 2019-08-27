@@ -28,6 +28,10 @@ const router = new Router({
         path: 'userInfo',
         name: 'userInfo',
         component: () => import('@/view/admin/column/Column')
+      }, {
+        path: 'fileCompare',
+        name: 'fileCompare',
+        component: () => import('@/view/admin/fileCompare/fileCompare.vue')
       }]
     }
   ]

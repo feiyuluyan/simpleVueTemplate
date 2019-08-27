@@ -68,7 +68,7 @@ export default {
           }
           Global.setUserInfo(user)
           alert('登录成功')
-          _this.$router.push('/admin/userInfo')
+          _this.$router.push('/admin/fileCompare')
         } else {
           Global.clearUserInfo()
           Global.clearJwtToken()
@@ -89,7 +89,7 @@ export default {
     if (Global.getJwtToken() !== '') {
       // this.$router.push('/admin/userInfo')
       const { href } = this.$router.resolve({
-        path: '/admin/userInfo'
+        path: '/admin/fileCompare'
       })
       window.open(href, '_blank')
     }
@@ -212,7 +212,7 @@ export default {
       background-color: #fff;
       text-align: center;
       margin-top: 150px;
-      height: 450px;
+      height: 360px;
       padding: 20px;
       width: 100%;
     }

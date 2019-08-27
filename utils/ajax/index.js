@@ -49,6 +49,8 @@ axios.ajax = function ajax (url, method, params, form = false) {
       config.data = params
     }
     // todo http request
+    
+    console.log('1')
     httpRequest(resolve, reject, config)
   })
 }
@@ -66,6 +68,27 @@ let httpRequest = function (resolve, reject, config, isRestry) {
     }).catch(error => {
         reject(true)
     })
+}
+
+axios.fileUpload = (url, formData) => {
+  return new Promise((resolve, reject) => {
+    let config = null
+    config = {
+      url: url,
+      method: 'post',
+      header: {
+        'Content-Type': 'multipart/form-data'
+      },
+      // 上传进度，超过99就固定在99
+      data: formData
+    }
+    if (Global.getJwtToken()) {
+      config.header['jwt_token'] = Global.getJwtToken()
+    }
+
+    console.log(config)
+    httpRequest(resolve, reject, config)
+  })
 }
 
 export default axios

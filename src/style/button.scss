@@ -1,0 +1,186 @@
+@mixin com ($name){
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  outline: 0;
+  margin: 0;
+  line-height: 1;
+  background: transparent url('/static/images/button/kt-button-#{$name}-n.png') no-repeat;
+  &:hover{
+    background: transparent url('/static/images/button/kt-button-#{$name}-h.png') no-repeat;
+    border: none;
+  }
+  &:focus{
+    background-color: transparent;
+  }
+}
+
+// 120x42 搜索 重置 提交 保存 取消 新增 确认 通过 驳回 导出 修改
+$regular: search reset submit save cancel add confirm add-dropdown withdraw audit pass reject export edit abandon;
+@each $var in $regular {
+  .kt-button-#{$var}{
+    width: 120px;
+    height: 42px;
+    @include com($var);
+  }
+}
+
+// 120x42 保存 取消
+$regular: save-old cancel-old ;
+@each $var in $regular {
+  .kt-button-#{$var}{
+    width: 120px;
+    height: 42px;
+    @include com($var);
+  }
+}
+
+// 210x46登录 登出 个人中心
+$home: login logout center;
+@each $var in $home {
+  .kt-button-#{$var}{
+    width: 210px;
+    height: 46px;
+    @include com($var);
+  } 
+}
+
+// 73x30 提交 上传 保存 新增 提交 删除 审核 撤回 取消
+$mini: mini-submit mini-upload mini-dark-add mini-dark-submit mini-light-add mini-light-submit mini-light-delete mini-light-edit mini-light-audit mini-light-import mini-light-withdraw noborder-edit noborder-delete noborder-download;
+@each $var in $mini {
+  .kt-button-#{$var}{
+    width: 73px;
+    height: 30px;
+    @include com($var);
+  } 
+}
+// 92x30 保存 取消
+$mini: mini-save mini-light-save mini-light-save mini-light-cancel noborder-download;
+@each $var in $mini {
+  .kt-button-#{$var}{
+    width: 92px;
+    height: 30px;
+    @include com($var);
+  } 
+}
+
+// 搜索按钮-100px
+.kt-button-mediam-search {
+  width: 100px;
+  height: 50px;
+  @include com(mediam-search);
+}
+// 新增按钮-110px dark
+.kt-button-long-dark-add {
+  width: 110px;
+  height: 30px;
+  @include com(long-dark-add);
+}
+// 新增下拉按钮-110px dark
+.kt-button-long-dark-add1 {
+  width: 95px;
+  height: 30px;
+  @include com(long-dark-add1);
+}
+// 新增按钮-94px light
+.kt-button-long-light-add {
+  width: 94px;
+  height: 30px;
+  @include com(long-light-add);
+}
+
+
+// 上传按钮-70px
+.kt-button-small-upload {
+  width: 100px;
+  height: 50px;
+  @include com(small-upload);
+}
+
+// 上传文件按钮-99px
+.kt-button-mini-uploadfile {
+  width: 99px;
+  height: 30px;
+  @include com(mini-uploadfile);
+}
+
+// 小型搜索按钮 -
+.kt-button-icon-search {
+  width: 36px;
+  height: 28px;
+  @include com(icon-search);
+}
+
+// 上传按钮 66px
+.kt-button-mini-small-upload {
+  width: 66px;
+  height: 30px;
+  @include com(mini-small-upload);
+}
+
+// 84x30 新增下拉 模版
+$mini_long: mini-add-dropdown mini-template;
+@each $var in $mini_long {
+  .kt-button-#{$var}{
+    width: 84px;
+    height: 30px;
+    @include com($var);
+  }
+}
+
+// 批量模版下载 174px
+.kt-button-mini-long-template {
+  width: 174px;
+  height: 30px;
+  @include com(mini-long-template);
+}
+
+// 保存并继续 150px x 42px
+.kt-button-save-continue {
+  width: 150px;
+  height: 42px;
+  @include com(save-continue);
+}
+
+
+// 新增项 新增子项
+.kt-button-item-add{
+    width: 90px;
+    height: 30px;
+    @include com(item-add);
+}
+.kt-button-itemChild-add{
+  width: 106px;
+  height: 30px;
+  @include com(itemChild-add);
+} 
+
+// 用户管理上传图片
+.kt-button-picture {
+  width: 31px;
+  height: 25px;
+  @include com(picture);
+}
+
+// 审核历史图片
+.kt-button-auditHistory {
+  width: 102px;
+  height: 30px;
+  @include com(auditHistory);
+}
+
+// 无文字的添加按钮
+.kt-button-addNoWord {
+  width: 48px;
+  height: 48px;
+  @include com(addNoWord);
+}
+
+// 纠错图标
+.kt-button-findError {
+  width: 50px;
+  height: 56px;
+  @include com(findError);
+}
