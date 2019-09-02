@@ -70,14 +70,12 @@ export default {
           alert('登录成功')
           _this.$router.push('/admin/fileCompare')
         } else {
-          Global.clearUserInfo()
           Global.clearJwtToken()
           alert('登陆失败！')
         }
       }).catch(error => {
         console.log(error)
         alert('登陆失败！')
-        Global.clearUserInfo()
         Global.clearJwtToken()
       })
     },

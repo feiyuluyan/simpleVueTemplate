@@ -41,7 +41,7 @@
         </div>
       </section>
     </section>
-    <a ref='fileId' :href="href" style="display: none"></a>
+    <a ref='fileId' :href="href"></a>
   </div>
 </template>
 <script>
@@ -146,7 +146,7 @@ export default {
       }
       ftpUpload(form).then((res) => {
         if (res.code === 200) {
-          _this.href = 'localhost' + res.data
+          _this.href = '/static/temp/' + res.data
           setTimeout(function () {
             _this.$refs.fileId.click()
           }, 1000)

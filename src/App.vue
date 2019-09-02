@@ -20,13 +20,12 @@ export default {
   color: #2c3e50;
   margin-top: 0px;
   width: 100%;
-  height: 100%;
+  height: auto;
   float: left;
   position: absolute;
   background-image: url(/static/images/front/background.png);
   background-repeat: no-repeat;
   background-size: cover;
-  min-width: 1080px;
-  min-height: 300px;
+  min-height: 937px;
 }
 </style>

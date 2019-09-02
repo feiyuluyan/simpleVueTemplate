@@ -35,9 +35,8 @@ export default {
 .content-column {
   padding: 150px 0;
   width: 100%;
-  min-height: 800px;
+  min-height: 937px;
   margin: 0 auto;
-  height: auto;
   background-color: #fff;
   display: block;
   overflow: hidden;
