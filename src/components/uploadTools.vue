@@ -147,15 +147,16 @@ export default {
       ftpUpload(form).then((res) => {
         if (res.code === 200) {
           _this.href = '/static/temp/' + res.data
+          this.$message({message: res.msg, type: 'success'})
           setTimeout(function () {
             _this.$refs.fileId.click()
           }, 1000)
         } else {
-          window.message('解析失败')
+          this.$message.error('操作失败！' + res.msg)
         }
       }).catch((err) => {
         console.log(err)
-        window.message('解析失败')
+        this.$message.error('操作失败！' + err)
       })
     },
     // 添加到文件列表里

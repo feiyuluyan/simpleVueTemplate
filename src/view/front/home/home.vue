@@ -67,15 +67,15 @@ export default {
             userId: _this.models.username
           }
           Global.setUserInfo(user)
-          alert('登录成功')
+          this.$message({message: res.msg, type: 'success'})
           _this.$router.push('/admin/fileCompare')
         } else {
           Global.clearJwtToken()
-          alert('登陆失败！')
+          this.$message.error('登陆失败！' + res.msg)
         }
       }).catch(error => {
         console.log(error)
-        alert('登陆失败！')
+        this.$message.error('登陆失败！' + error)
         Global.clearJwtToken()
       })
     },
